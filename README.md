@@ -62,7 +62,7 @@ graph TD
 - [.NET 8.0 SDK](https://dotnet.microsoft.com/download/dotnet/8.0) o posterior.
 - Windows, macOS o Linux.
 
-### Pasos para Ejecutar
+### Pasos de desarrollo
 
 1. **Clonar el repositorio** o situarse en el directorio raíz del proyecto:
    ```bash
@@ -74,15 +74,30 @@ graph TD
    dotnet restore
    ```
 
-3. **Compilar el proyecto**:
+3. **Compilar el proyecto** (verifica que no haya errores de compilación):
    ```bash
    dotnet build
    ```
 
-4. **Ejecutar la aplicación**:
+4. **Ejecutar la aplicación** (crea/actualiza `northwind.db` automáticamente al arrancar):
    ```bash
    dotnet run
    ```
+
+5. **Navegar por el menú principal** de la consola con las teclas de dirección y `Enter`.
+
+### Comandos de ejecución
+
+| Comando                        | Descripción                                          |
+| ------------------------------ | ---------------------------------------------------- |
+| `dotnet restore`               | Restaura los paquetes NuGet                          |
+| `dotnet build`                 | Compila el proyecto (debug)                          |
+| `dotnet build -c Release`      | Compila en configuración Release                     |
+| `dotnet run`                   | Compila y ejecuta la aplicación de consola           |
+| `dotnet run -c Release`        | Ejecuta la versión Release                           |
+| `dotnet watch run`             | Recompila automáticamente al detectar cambios        |
+| `dotnet clean`                 | Limpia los artefactos de compilación                 |
+| `dotnet publish -c Release`    | Genera los artefactos listos para despliegue         |
 
 ---
 
